@@ -1,5 +1,545 @@
 [
   {
+    "CVEId": "CVE-2018-20250",
+    "Description": "In WinRAR versions prior to and including 5.61, There is path traversal vulnerability when crafting the filename field of the ACE format (in UNACEV2.dll). When the filename field is manipulated with specific patterns, the destination (extraction) folder is ignored, thus treating the filename as an absolute path.",
+    "VendorL": [
+      "rarlab"
+    ],
+    "ProductL": [
+      "winrar"
+    ],
+    "CVSS_V2_baseScore": 6.8,
+    "CVSS_V3_baseScore": 7.8,
+    "PublishedDate": "2019-02-05T20:29:00.243",
+    "ModifyDate": "2025-03-13T17:07:28.57"
+  },
+  {
+    "CVEId": "CVE-2023-38831",
+    "Description": "RARLAB WinRAR before 6.23 allows attackers to execute arbitrary code when a user attempts to view a benign file within a ZIP archive. The issue occurs because a ZIP archive may include a benign file (such as an ordinary .JPG file) and also a folder that has the same name as the benign file, and the contents of the folder (which may include executable content) are processed during an attempt to access only the benign file. This was exploited in the wild in April through October 2023.",
+    "VendorL": [
+      "rarlab"
+    ],
+    "ProductL": [
+      "winrar"
+    ],
+    "CVSS_V2_baseScore": null,
+    "CVSS_V3_baseScore": 7.8,
+    "PublishedDate": "2023-08-23T17:15:43.863",
+    "ModifyDate": "2024-12-20T17:50:59.707"
+  },
+  {
+    "CVEId": "CVE-2022-43650",
+    "Description": "This vulnerability allows remote attackers to disclose sensitive information on affected installations of RARLAB WinRAR 6.11.0.0. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The specific flaw exists within the parsing of ZIP files. Crafted data in a ZIP file can trigger a read past the end of an allocated buffer. An attacker can leverage this in conjunction with other vulnerabilities to execute arbitrary code in the context of the current process. Was ZDI-CAN-19232.",
+    "VendorL": [
+      "rarlab"
+    ],
+    "ProductL": [
+      "winrar"
+    ],
+    "CVSS_V2_baseScore": null,
+    "CVSS_V3_baseScore": 2.5,
+    "PublishedDate": "2023-03-29T19:15:21.53",
+    "ModifyDate": "2024-11-21T07:26:58.553"
+  },
+  {
+    "CVEId": "CVE-2018-20253",
+    "Description": "In WinRAR versions prior to and including 5.60, There is an out-of-bounds write vulnerability during parsing of a crafted LHA / LZH archive formats. Successful exploitation could lead to arbitrary code execution in the context of the current user.",
+    "VendorL": [
+      "rarlab"
+    ],
+    "ProductL": [
+      "winrar"
+    ],
+    "CVSS_V2_baseScore": 6.8,
+    "CVSS_V3_baseScore": 7.8,
+    "PublishedDate": "2019-02-13T01:29:00.287",
+    "ModifyDate": "2024-11-21T04:01:10.58"
+  },
+  {
+    "CVEId": "CVE-2018-20252",
+    "Description": "In WinRAR versions prior to and including 5.60, there is an out-of-bounds write vulnerability during parsing of crafted ACE and RAR archive formats. Successful exploitation could lead to arbitrary code execution in the context of the current user.",
+    "VendorL": [
+      "rarlab"
+    ],
+    "ProductL": [
+      "winrar"
+    ],
+    "CVSS_V2_baseScore": 6.8,
+    "CVSS_V3_baseScore": 7.8,
+    "PublishedDate": "2019-02-05T20:29:00.32",
+    "ModifyDate": "2024-11-21T04:01:10.453"
+  },
+  {
+    "CVEId": "CVE-2018-20251",
+    "Description": "In WinRAR versions prior to and including 5.61, there is path traversal vulnerability when crafting the filename field of the ACE format. The UNACE module (UNACEV2.dll) creates files and folders as written in the filename field even when WinRAR validator noticed the traversal attempt and requestd to abort the extraction process. the operation is cancelled only after the folders and files were created but prior to them being written, therefore allowing the attacker to create empty files and folders everywhere in the file system.",
+    "VendorL": [
+      "rarlab"
+    ],
+    "ProductL": [
+      "winrar"
+    ],
+    "CVSS_V2_baseScore": 4.3,
+    "CVSS_V3_baseScore": 5.5,
+    "PublishedDate": "2019-02-05T20:29:00.273",
+    "ModifyDate": "2024-11-21T04:01:10.33"
+  },
+  {
+    "CVEId": "CVE-2015-5663",
+    "Description": "The file-execution functionality in WinRAR before 5.30 beta 5 allows local users to gain privileges via a Trojan horse file with a name similar to an extensionless filename that was selected by the user.",
+    "VendorL": [
+      "rarlab"
+    ],
+    "ProductL": [
+      "winrar"
+    ],
+    "CVSS_V2_baseScore": 3.7,
+    "CVSS_V3_baseScore": 7.4,
+    "PublishedDate": "2015-12-30T05:59:00.113",
+    "ModifyDate": "2024-11-21T02:33:35.097"
+  },
+  {
+    "CVEId": "CVE-2008-7144",
+    "Description": "Multiple unspecified vulnerabilities in RARLAB WinRAR before 3.71 have unknown impact and attack vectors related to crafted (1) ACE, (2) ARJ, (3) BZ2, (4) CAB, (5) GZ, (6) LHA, (7) RAR, (8) TAR, or (9) ZIP files, as demonstrated by the OUSPG PROTOS GENOME test suite for Archive Formats.",
+    "VendorL": [
+      "rarlab"
+    ],
+    "ProductL": [
+      "winrar"
+    ],
+    "CVSS_V2_baseScore": 10.0,
+    "CVSS_V3_baseScore": null,
+    "PublishedDate": "2009-09-01T16:30:00.563",
+    "ModifyDate": "2024-11-21T00:58:22.983"
+  },
+  {
+    "CVEId": "CVE-2006-3912",
+    "Description": "Stack-based buffer overflow in the SFX module in WinRAR before 3.60 beta 8 has unspecified vectors and impact.",
+    "VendorL": [
+      "rarlab"
+    ],
+    "ProductL": [
+      "winrar"
+    ],
+    "CVSS_V2_baseScore": 2.1,
+    "CVSS_V3_baseScore": null,
+    "PublishedDate": "2006-07-28T00:04:00",
+    "ModifyDate": "2024-11-21T00:14:41.703"
+  },
+  {
+    "CVEId": "CVE-2006-3845",
+    "Description": "Stack-based buffer overflow in lzh.fmt in WinRAR 3.00 through 3.60 beta 6 allows remote attackers to execute arbitrary code via a long filename in a LHA archive.",
+    "VendorL": [
+      "rarlab"
+    ],
+    "ProductL": [
+      "winrar"
+    ],
+    "CVSS_V2_baseScore": 9.3,
+    "CVSS_V3_baseScore": null,
+    "PublishedDate": "2006-07-25T23:04:00",
+    "ModifyDate": "2024-11-21T00:14:33.81"
+  },
+  {
+    "CVEId": "CVE-2005-4620",
+    "Description": "Buffer overflow in WinRAR 3.50 and earlier allows local users to execute arbitrary code via a long command-line argument.  NOTE: because this program executes with the privileges of the invoking user, and because remote programs do not normally have the ability to specify a command-line argument for this program, there may not be a typical attack vector for the issue that crosses privilege boundaries. Therefore this may not be a vulnerability.",
+    "VendorL": [
+      "rarlab"
+    ],
+    "ProductL": [
+      "winrar"
+    ],
+    "CVSS_V2_baseScore": 4.6,
+    "CVSS_V3_baseScore": null,
+    "PublishedDate": "2005-12-31T05:00:00",
+    "ModifyDate": "2024-11-21T00:04:46.103"
+  },
+  {
+    "CVEId": "CVE-2005-4474",
+    "Description": "Buffer overflow in the \"Add to archive\" command in WinRAR 3.51 allows user-assisted attackers to cause a denial of service (crash) and possibly execute arbitrary code by tricking the user into adding a file whose filename contains a non-default code page and non-ANSI characters, as demonstrated using a Chinese filename, possibly due to buffer expansion when using the WideCharToMultiByte API.  NOTE: it is not clear whether this problem can be exploited for code execution. If not, then perhaps the user-assisted nature of the attack should exclude the issue from inclusion in CVE.",
+    "VendorL": [
+      "rarlab"
+    ],
+    "ProductL": [
+      "winrar"
+    ],
+    "CVSS_V2_baseScore": 5.1,
+    "CVSS_V3_baseScore": null,
+    "PublishedDate": "2005-12-22T01:03:00",
+    "ModifyDate": "2024-11-21T00:04:20.773"
+  },
+  {
+    "CVEId": "CVE-2005-3263",
+    "Description": "Stack-based buffer overflow in UNACEV2.DLL for RARLAB WinRAR 2.90 through 3.50 allows remote attackers to execute arbitrary code via an ACE archive containing a file with a long name.",
+    "VendorL": [
+      "rarlab"
+    ],
+    "ProductL": [
+      "winrar"
+    ],
+    "CVSS_V2_baseScore": 7.5,
+    "CVSS_V3_baseScore": null,
+    "PublishedDate": "2005-10-20T10:02:00",
+    "ModifyDate": "2024-11-21T00:01:28.75"
+  },
+  {
+    "CVEId": "CVE-2005-3262",
+    "Description": "Format string vulnerability in RARLAB WinRAR 2.90 through 3.50 allows remote attackers to execute arbitrary code via format string specifiers in a UUE/XXE file, which are not properly handled when WinRAR displays diagnostic errors related to an invalid filename.",
+    "VendorL": [
+      "rarlab"
+    ],
+    "ProductL": [
+      "winrar"
+    ],
+    "CVSS_V2_baseScore": 7.5,
+    "CVSS_V3_baseScore": null,
+    "PublishedDate": "2005-10-20T10:02:00",
+    "ModifyDate": "2024-11-21T00:01:28.61"
+  },
+  {
+    "CVEId": "CVE-2005-0331",
+    "Description": "Directory traversal vulnerability in WinRAR 3.42 and earlier, when the user clicks on the ZIP file to extract it, allows remote attackers to create arbitrary files via a ... (triple dot) in the filename of the ZIP file.",
+    "VendorL": [
+      "rarlab"
+    ],
+    "ProductL": [
+      "winrar"
+    ],
+    "CVSS_V2_baseScore": 2.6,
+    "CVSS_V3_baseScore": null,
+    "PublishedDate": "2005-05-02T04:00:00",
+    "ModifyDate": "2024-11-20T23:54:54.42"
+  },
+  {
+    "CVEId": "CVE-2004-1495",
+    "Description": "The Repair Archive command in WinRAR 3.40 allows remote attackers to cause a denial of service (application crash) via a corrupt ZIP archive.",
+    "VendorL": [
+      "rarlab"
+    ],
+    "ProductL": [
+      "winrar"
+    ],
+    "CVSS_V2_baseScore": 2.6,
+    "CVSS_V3_baseScore": null,
+    "PublishedDate": "2004-12-31T05:00:00",
+    "ModifyDate": "2024-11-20T23:51:01.777"
+  },
+  {
+    "CVEId": "CVE-2004-1254",
+    "Description": "WinRAR 3.40, and possibly earlier versions, allows remote attackers to execute arbitrary code via a ZIP file containing a file with a long filename, possibly causing an integer overflow that leads to a buffer overflow.",
+    "VendorL": [
+      "rarlab"
+    ],
+    "ProductL": [
+      "winrar"
+    ],
+    "CVSS_V2_baseScore": 10.0,
+    "CVSS_V3_baseScore": null,
+    "PublishedDate": "2005-01-10T05:00:00",
+    "ModifyDate": "2024-11-20T23:50:26.433"
+  },
+  {
+    "CVEId": "CVE-2004-0235",
+    "Description": "Multiple directory traversal vulnerabilities in LHA 1.14 allow remote attackers or local users to create arbitrary files via an LHA archive containing filenames with (1) .. sequences or (2) absolute pathnames with double leading slashes (\"//absolute/path\").",
+    "VendorL": [
+      "redhat",
+      "f-secure",
+      "stalker",
+      "tsugio_okamoto",
+      "rarlab",
+      "winzip",
+      "sgi",
+      "clearswift"
+    ],
+    "ProductL": [
+      "lha",
+      "fedora_core",
+      "f-secure_anti-virus",
+      "f-secure_personal_express",
+      "f-secure_for_firewalls",
+      "internet_gatekeeper",
+      "f-secure_internet_security",
+      "cgpmcafee",
+      "lha",
+      "winrar",
+      "winzip",
+      "propack",
+      "mailsweeper"
+    ],
+    "CVSS_V2_baseScore": 6.4,
+    "CVSS_V3_baseScore": null,
+    "PublishedDate": "2004-08-18T04:00:00",
+    "ModifyDate": "2024-11-20T23:48:04.04"
+  },
+  {
+    "CVEId": "CVE-2004-0234",
+    "Description": "Multiple stack-based buffer overflows in the get_header function in header.c for LHA 1.14, as used in products such as Barracuda Spam Firewall, allow remote attackers or local users to execute arbitrary code via long directory or file names in an LHA archive, which triggers the overflow when testing or extracting the archive.",
+    "VendorL": [
+      "redhat",
+      "f-secure",
+      "stalker",
+      "tsugio_okamoto",
+      "rarlab",
+      "winzip",
+      "sgi",
+      "clearswift"
+    ],
+    "ProductL": [
+      "lha",
+      "fedora_core",
+      "f-secure_anti-virus",
+      "f-secure_personal_express",
+      "f-secure_for_firewalls",
+      "internet_gatekeeper",
+      "f-secure_internet_security",
+      "cgpmcafee",
+      "lha",
+      "winrar",
+      "winzip",
+      "propack",
+      "mailsweeper"
+    ],
+    "CVSS_V2_baseScore": 10.0,
+    "CVSS_V3_baseScore": null,
+    "PublishedDate": "2004-08-18T04:00:00",
+    "ModifyDate": "2024-11-20T23:48:03.86"
+  },
+  {
+    "CVEId": "CVE-2024-21411",
+    "Description": "Skype for Consumer Remote Code Execution Vulnerability",
+    "VendorL": [
+      "skype"
+    ],
+    "ProductL": [
+      "skype"
+    ],
+    "CVSS_V2_baseScore": null,
+    "CVSS_V3_baseScore": 8.8,
+    "PublishedDate": "2024-03-12T17:15:50.29",
+    "ModifyDate": "2024-12-27T17:07:01.77"
+  },
+  {
+    "CVEId": "CVE-2010-3136",
+    "Description": "Untrusted search path vulnerability in Skype 4.2.0.169 and earlier allows local users, and possibly remote attackers, to execute arbitrary code and conduct DLL hijacking attacks via a Trojan horse wab32.dll that is located in the same folder as a .skype file.",
+    "VendorL": [
+      "skype"
+    ],
+    "ProductL": [
+      "skype"
+    ],
+    "CVSS_V2_baseScore": 9.3,
+    "CVSS_V3_baseScore": null,
+    "PublishedDate": "2010-08-26T18:36:36.107",
+    "ModifyDate": "2024-11-21T01:18:06.86"
+  },
+  {
+    "CVEId": "CVE-2009-4741",
+    "Description": "Unspecified vulnerability in the Extras Manager before 2.0.0.67 in Skype before 4.1.0.179 on Windows has unknown impact and attack vectors.",
+    "VendorL": [
+      "skype",
+      "microsoft"
+    ],
+    "ProductL": [
+      "skype",
+      "windows"
+    ],
+    "CVSS_V2_baseScore": 10.0,
+    "CVSS_V3_baseScore": null,
+    "PublishedDate": "2010-03-26T20:30:00.377",
+    "ModifyDate": "2024-11-21T01:10:20.74"
+  },
+  {
+    "CVEId": "CVE-2006-2312",
+    "Description": "Argument injection vulnerability in the URI handler in Skype 2.0.*.104 and 2.5.*.0 through 2.5.*.78 for Windows allows remote authorized attackers to download arbitrary files via a URL that contains certain command-line switches.",
+    "VendorL": [
+      "skype",
+      "microsoft"
+    ],
+    "ProductL": [
+      "skype",
+      "windows"
+    ],
+    "CVSS_V2_baseScore": 2.6,
+    "CVSS_V3_baseScore": null,
+    "PublishedDate": "2006-05-19T21:02:00",
+    "ModifyDate": "2024-11-21T00:11:02.333"
+  },
+  {
+    "CVEId": "CVE-2004-1778",
+    "Description": "Skype 0.92.0.12 and 1.0.0.1 for Linux, and possibly other versions, creates the /usr/share/skype/lang directory with world-writable permissions, which allows local users to modify language files and possibly conduct social engineering or other attacks.",
+    "VendorL": [
+      "skype"
+    ],
+    "ProductL": [
+      "skype"
+    ],
+    "CVSS_V2_baseScore": 4.6,
+    "CVSS_V3_baseScore": null,
+    "PublishedDate": "2004-12-22T05:00:00",
+    "ModifyDate": "2024-11-20T23:51:43.443"
+  },
+  {
+    "CVEId": "CVE-2022-48579",
+    "Description": "UnRAR before 6.2.3 allows extraction of files outside of the destination folder via symlink chains.",
+    "VendorL": [
+      "rarlab"
+    ],
+    "ProductL": [
+      "unrar"
+    ],
+    "CVSS_V2_baseScore": null,
+    "CVSS_V3_baseScore": 7.5,
+    "PublishedDate": "2023-08-07T04:15:12.073",
+    "ModifyDate": "2024-11-21T07:33:32.017"
+  },
+  {
+    "CVEId": "CVE-2017-14122",
+    "Description": "unrar 0.0.1 (aka unrar-free or unrar-gpl) suffers from a stack-based buffer over-read in unrarlib.c, related to ExtrFile and stricomp.",
+    "VendorL": [
+      "debian",
+      "rarlab"
+    ],
+    "ProductL": [
+      "debian_linux",
+      "unrar"
+    ],
+    "CVSS_V2_baseScore": 6.4,
+    "CVSS_V3_baseScore": 9.1,
+    "PublishedDate": "2017-09-03T20:29:00.35",
+    "ModifyDate": "2024-11-21T03:12:11.03"
+  },
+  {
+    "CVEId": "CVE-2017-14121",
+    "Description": "The DecodeNumber function in unrarlib.c in unrar 0.0.1 (aka unrar-free or unrar-gpl) suffers from a NULL pointer dereference flaw triggered by a crafted RAR archive. NOTE: this may be the same as one of the several test cases in the CVE-2017-11189 references.",
+    "VendorL": [
+      "debian",
+      "rarlab"
+    ],
+    "ProductL": [
+      "debian_linux",
+      "unrar"
+    ],
+    "CVSS_V2_baseScore": 4.3,
+    "CVSS_V3_baseScore": 5.5,
+    "PublishedDate": "2017-09-03T20:29:00.317",
+    "ModifyDate": "2024-11-21T03:12:10.88"
+  },
+  {
+    "CVEId": "CVE-2017-14120",
+    "Description": "unrar 0.0.1 (aka unrar-free or unrar-gpl) suffers from a directory traversal vulnerability for RAR v2 archives: pathnames of the form ../[filename] are unpacked into the upper directory.",
+    "VendorL": [
+      "debian",
+      "rarlab"
+    ],
+    "ProductL": [
+      "debian_linux",
+      "unrar"
+    ],
+    "CVSS_V2_baseScore": 5.0,
+    "CVSS_V3_baseScore": 7.5,
+    "PublishedDate": "2017-09-03T20:29:00.287",
+    "ModifyDate": "2024-11-21T03:12:10.737"
+  },
+  {
+    "CVEId": "CVE-2017-12942",
+    "Description": "libunrar.a in UnRAR before 5.5.7 has a buffer overflow in the Unpack::LongLZ function.",
+    "VendorL": [
+      "rarlab"
+    ],
+    "ProductL": [
+      "unrar"
+    ],
+    "CVSS_V2_baseScore": 7.5,
+    "CVSS_V3_baseScore": 9.8,
+    "PublishedDate": "2017-08-18T14:29:00.657",
+    "ModifyDate": "2024-11-21T03:10:28.777"
+  },
+  {
+    "CVEId": "CVE-2017-12941",
+    "Description": "libunrar.a in UnRAR before 5.5.7 has an out-of-bounds read in the Unpack::Unpack20 function.",
+    "VendorL": [
+      "rarlab"
+    ],
+    "ProductL": [
+      "unrar"
+    ],
+    "CVSS_V2_baseScore": 7.5,
+    "CVSS_V3_baseScore": 9.8,
+    "PublishedDate": "2017-08-18T14:29:00.547",
+    "ModifyDate": "2024-11-21T03:10:28.64"
+  },
+  {
+    "CVEId": "CVE-2017-12940",
+    "Description": "libunrar.a in UnRAR before 5.5.7 has an out-of-bounds read in the EncodeFileName::Decode call within the Archive::ReadHeader15 function.",
+    "VendorL": [
+      "rarlab"
+    ],
+    "ProductL": [
+      "unrar"
+    ],
+    "CVSS_V2_baseScore": 7.5,
+    "CVSS_V3_baseScore": 9.8,
+    "PublishedDate": "2017-08-18T14:29:00.437",
+    "ModifyDate": "2024-11-21T03:10:28.51"
+  },
+  {
+    "CVEId": "CVE-2017-12938",
+    "Description": "UnRAR before 5.5.7 allows remote attackers to bypass a directory-traversal protection mechanism via vectors involving a symlink to the . directory, a symlink to the .. directory, and a regular file.",
+    "VendorL": [
+      "rarlab"
+    ],
+    "ProductL": [
+      "unrar"
+    ],
+    "CVSS_V2_baseScore": 5.0,
+    "CVSS_V3_baseScore": 7.5,
+    "PublishedDate": "2017-08-18T13:29:00.373",
+    "ModifyDate": "2024-11-21T03:10:28.237"
+  },
+  {
+    "CVEId": "CVE-2012-6706",
+    "Description": "A VMSF_DELTA memory corruption was discovered in unrar before 5.5.5, as used in Sophos Anti-Virus Threat Detection Engine before 3.37.2 and other products, that can lead to arbitrary code execution. An integer overflow can be caused in DataSize+CurChannel. The result is a negative value of the \"DestPos\" variable, which allows the attacker to write out of bounds when setting Mem[DestPos].",
+    "VendorL": [
+      "sophos",
+      "rarlab"
+    ],
+    "ProductL": [
+      "threat_detection_engine",
+      "unrar"
+    ],
+    "CVSS_V2_baseScore": 10.0,
+    "CVSS_V3_baseScore": 9.8,
+    "PublishedDate": "2017-06-22T13:29:00.173",
+    "ModifyDate": "2024-11-21T01:46:43.117"
+  },
+  {
+    "CVEId": "CVE-2007-3726",
+    "Description": "Integer signedness error in the SET_VALUE function in rarvm.cpp in unrar 3.70 beta 3, as used in products including WinRAR and RAR for OS X, allows user-assisted remote attackers to cause a denial of service (crash) via a crafted RAR archive that causes a negative signed number to be cast to a large unsigned number.",
+    "VendorL": [
+      "rarlab"
+    ],
+    "ProductL": [
+      "unrar"
+    ],
+    "CVSS_V2_baseScore": 4.3,
+    "CVSS_V3_baseScore": null,
+    "PublishedDate": "2007-07-12T16:30:00",
+    "ModifyDate": "2024-11-21T00:33:55.203"
+  },
+  {
+    "CVEId": "CVE-2007-0855",
+    "Description": "Stack-based buffer overflow in RARLabs Unrar, as packaged in WinRAR and possibly other products, allows user-assisted remote attackers to execute arbitrary code via a crafted, password-protected archive.",
+    "VendorL": [
+      "rarlab"
+    ],
+    "ProductL": [
+      "unrar"
+    ],
+    "CVSS_V2_baseScore": 6.8,
+    "CVSS_V3_baseScore": null,
+    "PublishedDate": "2007-02-08T18:28:00",
+    "ModifyDate": "2024-11-21T00:26:54.293"
+  },
+  {
     "CVEId": "CVE-2018-9193",
     "Description": "A researcher has disclosed several vulnerabilities against FortiClient for Windows version 6.0.5 and below, version 5.6.6, the combination of these vulnerabilities can turn into an exploit chain, which allows a user to gain system privileges on Microsoft Windows.",
     "VendorL": [
@@ -652,242 +1192,6 @@
     "ModifyDate": "2024-09-20T19:41:19.447"
   },
   {
-    "CVEId": "CVE-2022-48579",
-    "Description": "UnRAR before 6.2.3 allows extraction of files outside of the destination folder via symlink chains.",
-    "VendorL": [
-      "rarlab"
-    ],
-    "ProductL": [
-      "unrar"
-    ],
-    "CVSS_V2_baseScore": null,
-    "CVSS_V3_baseScore": 7.5,
-    "PublishedDate": "2023-08-07T04:15:12.073",
-    "ModifyDate": "2024-11-21T07:33:32.017"
-  },
-  {
-    "CVEId": "CVE-2017-14122",
-    "Description": "unrar 0.0.1 (aka unrar-free or unrar-gpl) suffers from a stack-based buffer over-read in unrarlib.c, related to ExtrFile and stricomp.",
-    "VendorL": [
-      "debian",
-      "rarlab"
-    ],
-    "ProductL": [
-      "debian_linux",
-      "unrar"
-    ],
-    "CVSS_V2_baseScore": 6.4,
-    "CVSS_V3_baseScore": 9.1,
-    "PublishedDate": "2017-09-03T20:29:00.35",
-    "ModifyDate": "2024-11-21T03:12:11.03"
-  },
-  {
-    "CVEId": "CVE-2017-14121",
-    "Description": "The DecodeNumber function in unrarlib.c in unrar 0.0.1 (aka unrar-free or unrar-gpl) suffers from a NULL pointer dereference flaw triggered by a crafted RAR archive. NOTE: this may be the same as one of the several test cases in the CVE-2017-11189 references.",
-    "VendorL": [
-      "debian",
-      "rarlab"
-    ],
-    "ProductL": [
-      "debian_linux",
-      "unrar"
-    ],
-    "CVSS_V2_baseScore": 4.3,
-    "CVSS_V3_baseScore": 5.5,
-    "PublishedDate": "2017-09-03T20:29:00.317",
-    "ModifyDate": "2024-11-21T03:12:10.88"
-  },
-  {
-    "CVEId": "CVE-2017-14120",
-    "Description": "unrar 0.0.1 (aka unrar-free or unrar-gpl) suffers from a directory traversal vulnerability for RAR v2 archives: pathnames of the form ../[filename] are unpacked into the upper directory.",
-    "VendorL": [
-      "debian",
-      "rarlab"
-    ],
-    "ProductL": [
-      "debian_linux",
-      "unrar"
-    ],
-    "CVSS_V2_baseScore": 5.0,
-    "CVSS_V3_baseScore": 7.5,
-    "PublishedDate": "2017-09-03T20:29:00.287",
-    "ModifyDate": "2024-11-21T03:12:10.737"
-  },
-  {
-    "CVEId": "CVE-2017-12942",
-    "Description": "libunrar.a in UnRAR before 5.5.7 has a buffer overflow in the Unpack::LongLZ function.",
-    "VendorL": [
-      "rarlab"
-    ],
-    "ProductL": [
-      "unrar"
-    ],
-    "CVSS_V2_baseScore": 7.5,
-    "CVSS_V3_baseScore": 9.8,
-    "PublishedDate": "2017-08-18T14:29:00.657",
-    "ModifyDate": "2024-11-21T03:10:28.777"
-  },
-  {
-    "CVEId": "CVE-2017-12941",
-    "Description": "libunrar.a in UnRAR before 5.5.7 has an out-of-bounds read in the Unpack::Unpack20 function.",
-    "VendorL": [
-      "rarlab"
-    ],
-    "ProductL": [
-      "unrar"
-    ],
-    "CVSS_V2_baseScore": 7.5,
-    "CVSS_V3_baseScore": 9.8,
-    "PublishedDate": "2017-08-18T14:29:00.547",
-    "ModifyDate": "2024-11-21T03:10:28.64"
-  },
-  {
-    "CVEId": "CVE-2017-12940",
-    "Description": "libunrar.a in UnRAR before 5.5.7 has an out-of-bounds read in the EncodeFileName::Decode call within the Archive::ReadHeader15 function.",
-    "VendorL": [
-      "rarlab"
-    ],
-    "ProductL": [
-      "unrar"
-    ],
-    "CVSS_V2_baseScore": 7.5,
-    "CVSS_V3_baseScore": 9.8,
-    "PublishedDate": "2017-08-18T14:29:00.437",
-    "ModifyDate": "2024-11-21T03:10:28.51"
-  },
-  {
-    "CVEId": "CVE-2017-12938",
-    "Description": "UnRAR before 5.5.7 allows remote attackers to bypass a directory-traversal protection mechanism via vectors involving a symlink to the . directory, a symlink to the .. directory, and a regular file.",
-    "VendorL": [
-      "rarlab"
-    ],
-    "ProductL": [
-      "unrar"
-    ],
-    "CVSS_V2_baseScore": 5.0,
-    "CVSS_V3_baseScore": 7.5,
-    "PublishedDate": "2017-08-18T13:29:00.373",
-    "ModifyDate": "2024-11-21T03:10:28.237"
-  },
-  {
-    "CVEId": "CVE-2012-6706",
-    "Description": "A VMSF_DELTA memory corruption was discovered in unrar before 5.5.5, as used in Sophos Anti-Virus Threat Detection Engine before 3.37.2 and other products, that can lead to arbitrary code execution. An integer overflow can be caused in DataSize+CurChannel. The result is a negative value of the \"DestPos\" variable, which allows the attacker to write out of bounds when setting Mem[DestPos].",
-    "VendorL": [
-      "sophos",
-      "rarlab"
-    ],
-    "ProductL": [
-      "threat_detection_engine",
-      "unrar"
-    ],
-    "CVSS_V2_baseScore": 10.0,
-    "CVSS_V3_baseScore": 9.8,
-    "PublishedDate": "2017-06-22T13:29:00.173",
-    "ModifyDate": "2024-11-21T01:46:43.117"
-  },
-  {
-    "CVEId": "CVE-2007-3726",
-    "Description": "Integer signedness error in the SET_VALUE function in rarvm.cpp in unrar 3.70 beta 3, as used in products including WinRAR and RAR for OS X, allows user-assisted remote attackers to cause a denial of service (crash) via a crafted RAR archive that causes a negative signed number to be cast to a large unsigned number.",
-    "VendorL": [
-      "rarlab"
-    ],
-    "ProductL": [
-      "unrar"
-    ],
-    "CVSS_V2_baseScore": 4.3,
-    "CVSS_V3_baseScore": null,
-    "PublishedDate": "2007-07-12T16:30:00",
-    "ModifyDate": "2024-11-21T00:33:55.203"
-  },
-  {
-    "CVEId": "CVE-2007-0855",
-    "Description": "Stack-based buffer overflow in RARLabs Unrar, as packaged in WinRAR and possibly other products, allows user-assisted remote attackers to execute arbitrary code via a crafted, password-protected archive.",
-    "VendorL": [
-      "rarlab"
-    ],
-    "ProductL": [
-      "unrar"
-    ],
-    "CVSS_V2_baseScore": 6.8,
-    "CVSS_V3_baseScore": null,
-    "PublishedDate": "2007-02-08T18:28:00",
-    "ModifyDate": "2024-11-21T00:26:54.293"
-  },
-  {
-    "CVEId": "CVE-2024-21411",
-    "Description": "Skype for Consumer Remote Code Execution Vulnerability",
-    "VendorL": [
-      "skype"
-    ],
-    "ProductL": [
-      "skype"
-    ],
-    "CVSS_V2_baseScore": null,
-    "CVSS_V3_baseScore": 8.8,
-    "PublishedDate": "2024-03-12T17:15:50.29",
-    "ModifyDate": "2024-12-27T17:07:01.77"
-  },
-  {
-    "CVEId": "CVE-2010-3136",
-    "Description": "Untrusted search path vulnerability in Skype 4.2.0.169 and earlier allows local users, and possibly remote attackers, to execute arbitrary code and conduct DLL hijacking attacks via a Trojan horse wab32.dll that is located in the same folder as a .skype file.",
-    "VendorL": [
-      "skype"
-    ],
-    "ProductL": [
-      "skype"
-    ],
-    "CVSS_V2_baseScore": 9.3,
-    "CVSS_V3_baseScore": null,
-    "PublishedDate": "2010-08-26T18:36:36.107",
-    "ModifyDate": "2024-11-21T01:18:06.86"
-  },
-  {
-    "CVEId": "CVE-2009-4741",
-    "Description": "Unspecified vulnerability in the Extras Manager before 2.0.0.67 in Skype before 4.1.0.179 on Windows has unknown impact and attack vectors.",
-    "VendorL": [
-      "skype",
-      "microsoft"
-    ],
-    "ProductL": [
-      "skype",
-      "windows"
-    ],
-    "CVSS_V2_baseScore": 10.0,
-    "CVSS_V3_baseScore": null,
-    "PublishedDate": "2010-03-26T20:30:00.377",
-    "ModifyDate": "2024-11-21T01:10:20.74"
-  },
-  {
-    "CVEId": "CVE-2006-2312",
-    "Description": "Argument injection vulnerability in the URI handler in Skype 2.0.*.104 and 2.5.*.0 through 2.5.*.78 for Windows allows remote authorized attackers to download arbitrary files via a URL that contains certain command-line switches.",
-    "VendorL": [
-      "skype",
-      "microsoft"
-    ],
-    "ProductL": [
-      "skype",
-      "windows"
-    ],
-    "CVSS_V2_baseScore": 2.6,
-    "CVSS_V3_baseScore": null,
-    "PublishedDate": "2006-05-19T21:02:00",
-    "ModifyDate": "2024-11-21T00:11:02.333"
-  },
-  {
-    "CVEId": "CVE-2004-1778",
-    "Description": "Skype 0.92.0.12 and 1.0.0.1 for Linux, and possibly other versions, creates the /usr/share/skype/lang directory with world-writable permissions, which allows local users to modify language files and possibly conduct social engineering or other attacks.",
-    "VendorL": [
-      "skype"
-    ],
-    "ProductL": [
-      "skype"
-    ],
-    "CVSS_V2_baseScore": 4.6,
-    "CVSS_V3_baseScore": null,
-    "PublishedDate": "2004-12-22T05:00:00",
-    "ModifyDate": "2024-11-20T23:51:43.443"
-  },
-  {
     "CVEId": "CVE-2024-31497",
     "Description": "In PuTTY 0.68 through 0.80 before 0.81, biased ECDSA nonce generation allows an attacker to recover a user's NIST P-521 secret key via a quick attack in approximately 60 signatures. This is especially important in a scenario where an adversary is able to read messages signed by PuTTY or Pageant. The required set of signed messages may be publicly readable because they are stored in a public Git service that supports use of SSH for commit signing, and the signatures were made by Pageant through an agent-forwarding mechanism. In other words, an adversary may already have enough signature information to compromise a victim's private key, even if there is no further use of vulnerable PuTTY versions. After a key compromise, an adversary may be able to conduct supply-chain attacks on software maintained in Git. A second, independent scenario is that the adversary is an operator of an SSH server to which the victim authenticates (for remote login or file copy), even though this server is not fully trusted by the victim, and the victim uses the same private key for SSH connections to other services operated by other entities. Here, the rogue server operator (who would otherwise have no way to determine the victim's private key) can derive the victim's private key, and then use it for unauthorized access to those other services. If the other services include Git services, then again it may be possible to conduct supply-chain attacks on software maintained in Git. This also affects, for example, FileZilla before 3.67.0, WinSCP before 6.3.3, TortoiseGit before 2.15.0.1, and TortoiseSVN through 1.14.6.",
     "VendorL": [
@@ -1082,309 +1386,5 @@
     "CVSS_V3_baseScore": 6.3,
     "PublishedDate": "2022-07-18T09:15:08.977",
     "ModifyDate": "2024-11-21T02:45:28.38"
-  },
-  {
-    "CVEId": "CVE-2018-20250",
-    "Description": "In WinRAR versions prior to and including 5.61, There is path traversal vulnerability when crafting the filename field of the ACE format (in UNACEV2.dll). When the filename field is manipulated with specific patterns, the destination (extraction) folder is ignored, thus treating the filename as an absolute path.",
-    "VendorL": [
-      "rarlab"
-    ],
-    "ProductL": [
-      "winrar"
-    ],
-    "CVSS_V2_baseScore": 6.8,
-    "CVSS_V3_baseScore": 7.8,
-    "PublishedDate": "2019-02-05T20:29:00.243",
-    "ModifyDate": "2025-03-13T17:07:28.57"
-  },
-  {
-    "CVEId": "CVE-2023-38831",
-    "Description": "RARLAB WinRAR before 6.23 allows attackers to execute arbitrary code when a user attempts to view a benign file within a ZIP archive. The issue occurs because a ZIP archive may include a benign file (such as an ordinary .JPG file) and also a folder that has the same name as the benign file, and the contents of the folder (which may include executable content) are processed during an attempt to access only the benign file. This was exploited in the wild in April through October 2023.",
-    "VendorL": [
-      "rarlab"
-    ],
-    "ProductL": [
-      "winrar"
-    ],
-    "CVSS_V2_baseScore": null,
-    "CVSS_V3_baseScore": 7.8,
-    "PublishedDate": "2023-08-23T17:15:43.863",
-    "ModifyDate": "2024-12-20T17:50:59.707"
-  },
-  {
-    "CVEId": "CVE-2022-43650",
-    "Description": "This vulnerability allows remote attackers to disclose sensitive information on affected installations of RARLAB WinRAR 6.11.0.0. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The specific flaw exists within the parsing of ZIP files. Crafted data in a ZIP file can trigger a read past the end of an allocated buffer. An attacker can leverage this in conjunction with other vulnerabilities to execute arbitrary code in the context of the current process. Was ZDI-CAN-19232.",
-    "VendorL": [
-      "rarlab"
-    ],
-    "ProductL": [
-      "winrar"
-    ],
-    "CVSS_V2_baseScore": null,
-    "CVSS_V3_baseScore": 2.5,
-    "PublishedDate": "2023-03-29T19:15:21.53",
-    "ModifyDate": "2024-11-21T07:26:58.553"
-  },
-  {
-    "CVEId": "CVE-2018-20253",
-    "Description": "In WinRAR versions prior to and including 5.60, There is an out-of-bounds write vulnerability during parsing of a crafted LHA / LZH archive formats. Successful exploitation could lead to arbitrary code execution in the context of the current user.",
-    "VendorL": [
-      "rarlab"
-    ],
-    "ProductL": [
-      "winrar"
-    ],
-    "CVSS_V2_baseScore": 6.8,
-    "CVSS_V3_baseScore": 7.8,
-    "PublishedDate": "2019-02-13T01:29:00.287",
-    "ModifyDate": "2024-11-21T04:01:10.58"
-  },
-  {
-    "CVEId": "CVE-2018-20252",
-    "Description": "In WinRAR versions prior to and including 5.60, there is an out-of-bounds write vulnerability during parsing of crafted ACE and RAR archive formats. Successful exploitation could lead to arbitrary code execution in the context of the current user.",
-    "VendorL": [
-      "rarlab"
-    ],
-    "ProductL": [
-      "winrar"
-    ],
-    "CVSS_V2_baseScore": 6.8,
-    "CVSS_V3_baseScore": 7.8,
-    "PublishedDate": "2019-02-05T20:29:00.32",
-    "ModifyDate": "2024-11-21T04:01:10.453"
-  },
-  {
-    "CVEId": "CVE-2018-20251",
-    "Description": "In WinRAR versions prior to and including 5.61, there is path traversal vulnerability when crafting the filename field of the ACE format. The UNACE module (UNACEV2.dll) creates files and folders as written in the filename field even when WinRAR validator noticed the traversal attempt and requestd to abort the extraction process. the operation is cancelled only after the folders and files were created but prior to them being written, therefore allowing the attacker to create empty files and folders everywhere in the file system.",
-    "VendorL": [
-      "rarlab"
-    ],
-    "ProductL": [
-      "winrar"
-    ],
-    "CVSS_V2_baseScore": 4.3,
-    "CVSS_V3_baseScore": 5.5,
-    "PublishedDate": "2019-02-05T20:29:00.273",
-    "ModifyDate": "2024-11-21T04:01:10.33"
-  },
-  {
-    "CVEId": "CVE-2015-5663",
-    "Description": "The file-execution functionality in WinRAR before 5.30 beta 5 allows local users to gain privileges via a Trojan horse file with a name similar to an extensionless filename that was selected by the user.",
-    "VendorL": [
-      "rarlab"
-    ],
-    "ProductL": [
-      "winrar"
-    ],
-    "CVSS_V2_baseScore": 3.7,
-    "CVSS_V3_baseScore": 7.4,
-    "PublishedDate": "2015-12-30T05:59:00.113",
-    "ModifyDate": "2024-11-21T02:33:35.097"
-  },
-  {
-    "CVEId": "CVE-2008-7144",
-    "Description": "Multiple unspecified vulnerabilities in RARLAB WinRAR before 3.71 have unknown impact and attack vectors related to crafted (1) ACE, (2) ARJ, (3) BZ2, (4) CAB, (5) GZ, (6) LHA, (7) RAR, (8) TAR, or (9) ZIP files, as demonstrated by the OUSPG PROTOS GENOME test suite for Archive Formats.",
-    "VendorL": [
-      "rarlab"
-    ],
-    "ProductL": [
-      "winrar"
-    ],
-    "CVSS_V2_baseScore": 10.0,
-    "CVSS_V3_baseScore": null,
-    "PublishedDate": "2009-09-01T16:30:00.563",
-    "ModifyDate": "2024-11-21T00:58:22.983"
-  },
-  {
-    "CVEId": "CVE-2006-3912",
-    "Description": "Stack-based buffer overflow in the SFX module in WinRAR before 3.60 beta 8 has unspecified vectors and impact.",
-    "VendorL": [
-      "rarlab"
-    ],
-    "ProductL": [
-      "winrar"
-    ],
-    "CVSS_V2_baseScore": 2.1,
-    "CVSS_V3_baseScore": null,
-    "PublishedDate": "2006-07-28T00:04:00",
-    "ModifyDate": "2024-11-21T00:14:41.703"
-  },
-  {
-    "CVEId": "CVE-2006-3845",
-    "Description": "Stack-based buffer overflow in lzh.fmt in WinRAR 3.00 through 3.60 beta 6 allows remote attackers to execute arbitrary code via a long filename in a LHA archive.",
-    "VendorL": [
-      "rarlab"
-    ],
-    "ProductL": [
-      "winrar"
-    ],
-    "CVSS_V2_baseScore": 9.3,
-    "CVSS_V3_baseScore": null,
-    "PublishedDate": "2006-07-25T23:04:00",
-    "ModifyDate": "2024-11-21T00:14:33.81"
-  },
-  {
-    "CVEId": "CVE-2005-4620",
-    "Description": "Buffer overflow in WinRAR 3.50 and earlier allows local users to execute arbitrary code via a long command-line argument.  NOTE: because this program executes with the privileges of the invoking user, and because remote programs do not normally have the ability to specify a command-line argument for this program, there may not be a typical attack vector for the issue that crosses privilege boundaries. Therefore this may not be a vulnerability.",
-    "VendorL": [
-      "rarlab"
-    ],
-    "ProductL": [
-      "winrar"
-    ],
-    "CVSS_V2_baseScore": 4.6,
-    "CVSS_V3_baseScore": null,
-    "PublishedDate": "2005-12-31T05:00:00",
-    "ModifyDate": "2024-11-21T00:04:46.103"
-  },
-  {
-    "CVEId": "CVE-2005-4474",
-    "Description": "Buffer overflow in the \"Add to archive\" command in WinRAR 3.51 allows user-assisted attackers to cause a denial of service (crash) and possibly execute arbitrary code by tricking the user into adding a file whose filename contains a non-default code page and non-ANSI characters, as demonstrated using a Chinese filename, possibly due to buffer expansion when using the WideCharToMultiByte API.  NOTE: it is not clear whether this problem can be exploited for code execution. If not, then perhaps the user-assisted nature of the attack should exclude the issue from inclusion in CVE.",
-    "VendorL": [
-      "rarlab"
-    ],
-    "ProductL": [
-      "winrar"
-    ],
-    "CVSS_V2_baseScore": 5.1,
-    "CVSS_V3_baseScore": null,
-    "PublishedDate": "2005-12-22T01:03:00",
-    "ModifyDate": "2024-11-21T00:04:20.773"
-  },
-  {
-    "CVEId": "CVE-2005-3263",
-    "Description": "Stack-based buffer overflow in UNACEV2.DLL for RARLAB WinRAR 2.90 through 3.50 allows remote attackers to execute arbitrary code via an ACE archive containing a file with a long name.",
-    "VendorL": [
-      "rarlab"
-    ],
-    "ProductL": [
-      "winrar"
-    ],
-    "CVSS_V2_baseScore": 7.5,
-    "CVSS_V3_baseScore": null,
-    "PublishedDate": "2005-10-20T10:02:00",
-    "ModifyDate": "2024-11-21T00:01:28.75"
-  },
-  {
-    "CVEId": "CVE-2005-3262",
-    "Description": "Format string vulnerability in RARLAB WinRAR 2.90 through 3.50 allows remote attackers to execute arbitrary code via format string specifiers in a UUE/XXE file, which are not properly handled when WinRAR displays diagnostic errors related to an invalid filename.",
-    "VendorL": [
-      "rarlab"
-    ],
-    "ProductL": [
-      "winrar"
-    ],
-    "CVSS_V2_baseScore": 7.5,
-    "CVSS_V3_baseScore": null,
-    "PublishedDate": "2005-10-20T10:02:00",
-    "ModifyDate": "2024-11-21T00:01:28.61"
-  },
-  {
-    "CVEId": "CVE-2005-0331",
-    "Description": "Directory traversal vulnerability in WinRAR 3.42 and earlier, when the user clicks on the ZIP file to extract it, allows remote attackers to create arbitrary files via a ... (triple dot) in the filename of the ZIP file.",
-    "VendorL": [
-      "rarlab"
-    ],
-    "ProductL": [
-      "winrar"
-    ],
-    "CVSS_V2_baseScore": 2.6,
-    "CVSS_V3_baseScore": null,
-    "PublishedDate": "2005-05-02T04:00:00",
-    "ModifyDate": "2024-11-20T23:54:54.42"
-  },
-  {
-    "CVEId": "CVE-2004-1495",
-    "Description": "The Repair Archive command in WinRAR 3.40 allows remote attackers to cause a denial of service (application crash) via a corrupt ZIP archive.",
-    "VendorL": [
-      "rarlab"
-    ],
-    "ProductL": [
-      "winrar"
-    ],
-    "CVSS_V2_baseScore": 2.6,
-    "CVSS_V3_baseScore": null,
-    "PublishedDate": "2004-12-31T05:00:00",
-    "ModifyDate": "2024-11-20T23:51:01.777"
-  },
-  {
-    "CVEId": "CVE-2004-1254",
-    "Description": "WinRAR 3.40, and possibly earlier versions, allows remote attackers to execute arbitrary code via a ZIP file containing a file with a long filename, possibly causing an integer overflow that leads to a buffer overflow.",
-    "VendorL": [
-      "rarlab"
-    ],
-    "ProductL": [
-      "winrar"
-    ],
-    "CVSS_V2_baseScore": 10.0,
-    "CVSS_V3_baseScore": null,
-    "PublishedDate": "2005-01-10T05:00:00",
-    "ModifyDate": "2024-11-20T23:50:26.433"
-  },
-  {
-    "CVEId": "CVE-2004-0235",
-    "Description": "Multiple directory traversal vulnerabilities in LHA 1.14 allow remote attackers or local users to create arbitrary files via an LHA archive containing filenames with (1) .. sequences or (2) absolute pathnames with double leading slashes (\"//absolute/path\").",
-    "VendorL": [
-      "redhat",
-      "f-secure",
-      "stalker",
-      "tsugio_okamoto",
-      "rarlab",
-      "winzip",
-      "sgi",
-      "clearswift"
-    ],
-    "ProductL": [
-      "lha",
-      "fedora_core",
-      "f-secure_anti-virus",
-      "f-secure_personal_express",
-      "f-secure_for_firewalls",
-      "internet_gatekeeper",
-      "f-secure_internet_security",
-      "cgpmcafee",
-      "lha",
-      "winrar",
-      "winzip",
-      "propack",
-      "mailsweeper"
-    ],
-    "CVSS_V2_baseScore": 6.4,
-    "CVSS_V3_baseScore": null,
-    "PublishedDate": "2004-08-18T04:00:00",
-    "ModifyDate": "2024-11-20T23:48:04.04"
-  },
-  {
-    "CVEId": "CVE-2004-0234",
-    "Description": "Multiple stack-based buffer overflows in the get_header function in header.c for LHA 1.14, as used in products such as Barracuda Spam Firewall, allow remote attackers or local users to execute arbitrary code via long directory or file names in an LHA archive, which triggers the overflow when testing or extracting the archive.",
-    "VendorL": [
-      "redhat",
-      "f-secure",
-      "stalker",
-      "tsugio_okamoto",
-      "rarlab",
-      "winzip",
-      "sgi",
-      "clearswift"
-    ],
-    "ProductL": [
-      "lha",
-      "fedora_core",
-      "f-secure_anti-virus",
-      "f-secure_personal_express",
-      "f-secure_for_firewalls",
-      "internet_gatekeeper",
-      "f-secure_internet_security",
-      "cgpmcafee",
-      "lha",
-      "winrar",
-      "winzip",
-      "propack",
-      "mailsweeper"
-    ],
-    "CVSS_V2_baseScore": 10.0,
-    "CVSS_V3_baseScore": null,
-    "PublishedDate": "2004-08-18T04:00:00",
-    "ModifyDate": "2024-11-20T23:48:03.86"
   }
 ]
